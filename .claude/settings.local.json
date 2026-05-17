@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C /Users/wonhonghwang/Desktop/work/personal/2026-portfolio remote set-url origin https://github.com/hwhmmm/2026-portfolio.git)",
+      "Bash(git -C /Users/wonhonghwang/Desktop/work/personal/2026-portfolio remote -v)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(git -C /Users/wonhonghwang/Desktop/work/personal/2026-portfolio add style.css script.js index.html)",
+      "Bash(git -C /Users/wonhonghwang/Desktop/work/personal/2026-portfolio commit -m ' *)",
+      "Bash(git -C /Users/wonhonghwang/Desktop/work/personal/2026-portfolio push origin main)"
+    ]
+  }
+}
