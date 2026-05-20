@@ -8,7 +8,9 @@
       "Bash(git push *)",
       "Bash(git -C /Users/wonhonghwang/Desktop/work/personal/2026-portfolio add style.css script.js index.html)",
       "Bash(git -C /Users/wonhonghwang/Desktop/work/personal/2026-portfolio commit -m ' *)",
-      "Bash(git -C /Users/wonhonghwang/Desktop/work/personal/2026-portfolio push origin main)"
+      "Bash(git -C /Users/wonhonghwang/Desktop/work/personal/2026-portfolio push origin main)",
+      "Bash(git commit *)",
+      "Bash(gh repo *)"
     ]
   }
 }
