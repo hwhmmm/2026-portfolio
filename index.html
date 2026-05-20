@@ -13,34 +13,238 @@
     <!-- NAV -->
     <nav>
         <div class="nav-inner">
-            <a href="#hero" class="nav-logo">WH.</a>
+            <a href="#about" class="nav-logo">WH.</a>
             <ul class="nav-links">
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- HERO -->
-    <section id="hero">
+    <!-- ABOUT (HERO) -->
+    <section id="about">
         <div class="container hero-inner">
             <div class="hero-text fade-up">
                 <div class="hero-badge">Available for work</div>
                 <p class="hero-name-ko">황원홍</p>
                 <h1 class="hero-name-en">Hwang<br /><span>Wonhong</span></h1>
                 <p class="hero-desc">
-                    사용자 경험을 중심으로 생각하는 웹 퍼블리셔입니다.<br />
-                    픽셀 단위의 정밀함과 깔끔한 시맨틱 마크업으로<br />
-                    아이디어를 화면에 구현합니다.
+                    경력 5년차 웹 퍼블리셔입니다.<br />
+                    Figma 시안을 픽셀 단위의 정밀함으로 구현하고,<br />
+                    시맨틱 마크업과 SCSS로 유지보수 가능한 코드를 작성합니다.
                 </p>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <strong>5년+</strong>
+                        <span>실무 경력</span>
+                    </div>
+                    <div class="hero-stat">
+                        <strong>120+</strong>
+                        <span>퍼블리싱 페이지</span>
+                    </div>
+                    <div class="hero-stat">
+                        <strong>20+</strong>
+                        <span>참여 프로젝트</span>
+                    </div>
+                </div>
                 <div class="hero-cta">
-                    <a href="#projects" class="btn btn-primary">프로젝트 보기 →</a>
+                    <a href="#work" class="btn btn-primary">경력 보기 →</a>
                     <a href="#contact" class="btn btn-outline">연락하기</a>
                 </div>
             </div>
             <div class="hero-avatar fade-up">
                 <div class="hero-avatar-inner">👨‍💻</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WORK EXPERIENCE -->
+    <section id="work">
+        <div class="container">
+            <div class="fade-up">
+                <span class="section-label">Work Experience</span>
+                <h2 class="section-title">경력 사항</h2>
+                <p class="section-sub">이전 회사에서 진행한 주요 작업물과 성과입니다.</p>
+            </div>
+            <div class="work-list">
+
+                <div class="work-card fade-up">
+                    <div class="work-header">
+                        <div class="work-company-info">
+                            <h3 class="work-company">(주)픽셀웍스</h3>
+                            <p class="work-role">웹 퍼블리셔</p>
+                            <span class="work-period">2022.09 — 2025.02 · 2년 6개월</span>
+                        </div>
+                        <span class="work-badge">정규직</span>
+                    </div>
+                    <div class="work-body">
+                        <ul class="work-desc">
+                            <li>이커머스·브랜드 사이트·관리자 시스템 등 다양한 유형의 반응형 퍼블리싱 수행</li>
+                            <li>Figma 시안 기반 SCSS BEM 방법론 적용으로 컴포넌트 재사용성 및 유지보수성 향상</li>
+                            <li>GSAP ScrollTrigger를 활용한 인터랙티브 스크롤 애니메이션 구현</li>
+                            <li>크로스브라우징(Chrome·Safari·Firefox·Edge) 대응 및 WCAG 2.1 웹 접근성 기준 준수</li>
+                            <li>퍼블리싱 가이드 문서 작성 및 신규 팀원 온보딩 지원</li>
+                        </ul>
+                        <div class="work-stats">
+                            <div class="work-stat">
+                                <strong>80+</strong>
+                                <span>퍼블리싱 페이지</span>
+                            </div>
+                            <div class="work-stat">
+                                <strong>15개</strong>
+                                <span>참여 프로젝트</span>
+                            </div>
+                            <div class="work-stat">
+                                <strong>4개</strong>
+                                <span>지원 브라우저</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-card fade-up">
+                    <div class="work-header">
+                        <div class="work-company-info">
+                            <h3 class="work-company">스튜디오 포맷</h3>
+                            <p class="work-role">웹 퍼블리셔</p>
+                            <span class="work-period">2020.03 — 2022.08 · 2년 6개월</span>
+                        </div>
+                        <span class="work-badge">정규직</span>
+                    </div>
+                    <div class="work-body">
+                        <ul class="work-desc">
+                            <li>쇼핑몰·기업 홈페이지·랜딩페이지 HTML / CSS / jQuery 기반 퍼블리싱 담당</li>
+                            <li>Swiper.js 슬라이더, 탭·아코디언 등 공통 UI 컴포넌트 개발 및 라이브러리화</li>
+                            <li>모바일 퍼스트 반응형 그리드 시스템 도입으로 작업 시간 약 30% 단축</li>
+                            <li>디자인팀·개발팀 간 커뮤니케이션 담당, 퍼블리싱 산출물 기한 내 100% 납품</li>
+                        </ul>
+                        <div class="work-stats">
+                            <div class="work-stat">
+                                <strong>40+</strong>
+                                <span>납품 페이지</span>
+                            </div>
+                            <div class="work-stat">
+                                <strong>30%</strong>
+                                <span>작업 시간 단축</span>
+                            </div>
+                            <div class="work-stat">
+                                <strong>100%</strong>
+                                <span>납기 준수율</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <div class="container">
+            <div class="fade-up">
+                <span class="section-label">Projects</span>
+                <h2 class="section-title">개인 프로젝트</h2>
+                <p class="section-sub">개인적으로 기획하고 제작한 작업물입니다.</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card fade-up">
+                    <div class="project-thumb project-thumb-1">☕</div>
+                    <div class="project-body">
+                        <p class="project-type">Brand · Landing</p>
+                        <h3 class="project-title">Brewly — 카페 브랜드 사이트</h3>
+                        <p class="project-desc">
+                            스페셜티 커피 브랜드의 아이덴티티를 담은 반응형 브랜드 사이트.
+                            GSAP ScrollTrigger로 패럴렉스 및 텍스트 리빌 애니메이션을 구현했습니다.
+                        </p>
+                        <div class="project-footer">
+                            <div class="project-tags">
+                                <span class="project-tag">HTML</span>
+                                <span class="project-tag">SCSS</span>
+                                <span class="project-tag">GSAP</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/hwhmmm/brewly" target="_blank" rel="noopener" class="project-link">GitHub →</a>
+                                <a href="#" class="project-link">Live →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-up">
+                    <div class="project-thumb project-thumb-2">👗</div>
+                    <div class="project-body">
+                        <p class="project-type">E-Commerce</p>
+                        <h3 class="project-title">Modhaus — 패션 쇼핑몰 UI</h3>
+                        <p class="project-desc">
+                            모바일 퍼스트로 구현한 패션 브랜드 쇼핑몰 UI.
+                            상품 필터, 무한 스크롤, 장바구니 인터랙션을 바닐라 JS로 처리했습니다.
+                        </p>
+                        <div class="project-footer">
+                            <div class="project-tags">
+                                <span class="project-tag">HTML</span>
+                                <span class="project-tag">SCSS</span>
+                                <span class="project-tag">JavaScript</span>
+                                <span class="project-tag">Swiper</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/hwhmmm/modhaus" target="_blank" rel="noopener" class="project-link">GitHub →</a>
+                                <a href="#" class="project-link">Live →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-up">
+                    <div class="project-thumb project-thumb-3">🚀</div>
+                    <div class="project-body">
+                        <p class="project-type">App · Landing</p>
+                        <h3 class="project-title">Taskly — 앱 서비스 랜딩페이지</h3>
+                        <p class="project-desc">
+                            생산성 앱 출시에 맞춰 제작한 프로모션 랜딩페이지.
+                            섹션별 스크롤 애니메이션과 디바이스 목업 전환 효과를 구현했습니다.
+                        </p>
+                        <div class="project-footer">
+                            <div class="project-tags">
+                                <span class="project-tag">HTML</span>
+                                <span class="project-tag">SCSS</span>
+                                <span class="project-tag">GSAP</span>
+                                <span class="project-tag">Swiper</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/hwhmmm/taskly-landing" target="_blank" rel="noopener" class="project-link">GitHub →</a>
+                                <a href="#" class="project-link">Live →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-up">
+                    <div class="project-thumb project-thumb-4">📊</div>
+                    <div class="project-body">
+                        <p class="project-type">Admin · Dashboard</p>
+                        <h3 class="project-title">AdminKit — 대시보드 UI 템플릿</h3>
+                        <p class="project-desc">
+                            Chart.js 기반 데이터 시각화와 사이드바 내비게이션을 갖춘
+                            반응형 어드민 UI 템플릿입니다. 다크모드 전환을 지원합니다.
+                        </p>
+                        <div class="project-footer">
+                            <div class="project-tags">
+                                <span class="project-tag">HTML</span>
+                                <span class="project-tag">CSS</span>
+                                <span class="project-tag">JavaScript</span>
+                                <span class="project-tag">Chart.js</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/hwhmmm/adminkit" target="_blank" rel="noopener" class="project-link">GitHub →</a>
+                                <a href="#" class="project-link">Live →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -90,98 +294,6 @@
                     <div class="skill-tags">
                         <span class="tag">Git / GitHub</span>
                         <span class="tag">Figma</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects">
-        <div class="container">
-            <div class="fade-up">
-                <span class="section-label">Projects</span>
-                <h2 class="section-title">프로젝트</h2>
-                <p class="section-sub">직접 제작하거나 참여한 작업물입니다.</p>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card fade-up">
-                    <div class="project-thumb project-thumb-1">🛍️</div>
-                    <div class="project-body">
-                        <p class="project-type">E-Commerce</p>
-                        <h3 class="project-title">쇼핑몰 반응형 퍼블리싱</h3>
-                        <p class="project-desc">
-                            피그마 디자인을 기반으로 시맨틱 마크업과 SCSS를 활용해
-                            모바일 퍼스트로 구현한 이커머스 UI입니다.
-                        </p>
-                        <div class="project-footer">
-                            <div class="project-tags">
-                                <span class="project-tag">HTML</span>
-                                <span class="project-tag">SCSS</span>
-                                <span class="project-tag">jQuery</span>
-                            </div>
-                            <a href="#" class="project-link">보기 →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card fade-up">
-                    <div class="project-thumb project-thumb-2">🏢</div>
-                    <div class="project-body">
-                        <p class="project-type">Corporate</p>
-                        <h3 class="project-title">기업 소개 웹사이트</h3>
-                        <p class="project-desc">
-                            스크롤 애니메이션과 인터랙티브 요소를 활용해
-                            브랜드 아이덴티티를 담은 기업 사이트를 구축했습니다.
-                        </p>
-                        <div class="project-footer">
-                            <div class="project-tags">
-                                <span class="project-tag">HTML</span>
-                                <span class="project-tag">CSS</span>
-                                <span class="project-tag">GSAP</span>
-                            </div>
-                            <a href="#" class="project-link">보기 →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card fade-up">
-                    <div class="project-thumb project-thumb-3">📱</div>
-                    <div class="project-body">
-                        <p class="project-type">Mobile UI</p>
-                        <h3 class="project-title">모바일 앱 랜딩페이지</h3>
-                        <p class="project-desc">
-                            앱 출시에 맞춰 제작한 프로모션 랜딩페이지로
-                            전환율 향상을 위한 UX 구조를 설계했습니다.
-                        </p>
-                        <div class="project-footer">
-                            <div class="project-tags">
-                                <span class="project-tag">HTML</span>
-                                <span class="project-tag">SCSS</span>
-                                <span class="project-tag">Swiper</span>
-                            </div>
-                            <a href="#" class="project-link">보기 →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card fade-up">
-                    <div class="project-thumb project-thumb-4">📊</div>
-                    <div class="project-body">
-                        <p class="project-type">Admin / Dashboard</p>
-                        <h3 class="project-title">관리자 대시보드 UI</h3>
-                        <p class="project-desc">
-                            데이터 시각화와 컴포넌트 기반 구조로 제작한
-                            백오피스 관리 시스템 UI/UX 퍼블리싱입니다.
-                        </p>
-                        <div class="project-footer">
-                            <div class="project-tags">
-                                <span class="project-tag">HTML</span>
-                                <span class="project-tag">CSS</span>
-                                <span class="project-tag">JS</span>
-                            </div>
-                            <a href="#" class="project-link">보기 →</a>
-                        </div>
                     </div>
                 </div>
             </div>
