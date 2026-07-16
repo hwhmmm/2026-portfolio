@@ -1,0 +1,16 @@
+/* ---------- Works ---------- */
+.works-title{font-family:var(--serif);font-weight:900;font-size:64px;letter-spacing:-.03em;margin-bottom:40px}
+.works-title-em{font-style:italic;color:var(--dust)}
+.works-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.gcard{display:block;background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:transform .22s cubic-bezier(.2,.8,.2,1),box-shadow .22s,border-color .22s}
+.gcard:hover{transform:translateY(-7px);box-shadow:var(--shadow)}
+.gcard-thumb{position:relative;aspect-ratio:16/11}
+.gcard-file{position:absolute;left:12px;top:12px;font:400 11px var(--mono);color:rgba(255,255,255,.92);background:rgba(0,0,0,.22);padding:3px 8px;border-radius:6px}
+.gcard-body{padding:18px 18px 20px}
+.gcard-head{display:flex;justify-content:space-between;align-items:baseline}
+.gcard-title{font:700 17px var(--sans)}
+.badge{font:700 10px var(--mono);letter-spacing:.04em;padding:2px 9px;border-radius:20px;background:rgba(0,102,255,.1);color:var(--accent)}
+.gcard-meta{font:400 12px var(--mono);color:var(--ink3);margin-top:6px}
+.gcard-foot{display:flex;justify-content:space-between;align-items:center;margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
+.gcard-url{font:400 12px var(--mono);color:var(--ink2)}
+.gcard-go{color:var(--accent);font-size:14px}

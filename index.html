@@ -1,340 +1,232 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hwang Wonhong | Web Publisher</title>
-    <link rel="stylesheet" href="style.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>황원홍 · 웹퍼블리셔 포트폴리오 2026</title>
+<meta name="description" content="8년차 웹퍼블리셔 황원홍의 포트폴리오. HTML5 · SCSS · JavaScript · jQuery.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Sacramento&family=Space+Mono:wght@400;700&family=Nanum+Myeongjo:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<link rel="stylesheet" href="dist/css/main.css">
 </head>
-
 <body>
 
-    <!-- NAV -->
-    <nav>
-        <div class="nav-inner">
-            <a href="#about" class="nav-logo">WH.</a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#work">Work Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
+<div class="wrap" id="wrap">
+
+  <!-- MENUBAR -->
+  <div class="mbar" id="mbar">
+    <span class="mbar-brand">◐ HWANG WONHONG</span>
+    <nav class="mnav">
+      <a class="navk active" data-nav="home" href="#home">Home</a>
+      <a class="navk" data-nav="about" href="#about">About</a>
+      <a class="navk" data-nav="skills" href="#skills">Skills</a>
+      <a class="navk" data-nav="works" href="#works">Works</a>
+      <a class="navk" data-nav="contact" href="#contact">Contact</a>
     </nav>
+    <div class="mbar-right">
+      <button class="tgl" type="button" data-theme-toggle><span class="sun">☀ Light</span><span class="moon">☾ Dark</span></button>
+      <span class="mbar-time">9:41</span>
+    </div>
+  </div>
 
-    <!-- ABOUT (HERO) -->
-    <section id="about">
-        <div class="container hero-inner">
-            <div class="hero-text fade-up">
-                <div class="hero-badge">Available for work</div>
-                <p class="hero-name-ko">황원홍</p>
-                <h1 class="hero-name-en">Hwang<br /><span>Wonhong</span></h1>
-                <p class="hero-desc">
-                    경력 5년차 웹 퍼블리셔입니다.<br />
-                    Figma 시안을 픽셀 단위의 정밀함으로 구현하고,<br />
-                    시맨틱 마크업과 SCSS로 유지보수 가능한 코드를 작성합니다.
-                </p>
-                <div class="hero-stats">
-                    <div class="hero-stat">
-                        <strong>5년+</strong>
-                        <span>실무 경력</span>
-                    </div>
-                    <div class="hero-stat">
-                        <strong>120+</strong>
-                        <span>퍼블리싱 페이지</span>
-                    </div>
-                    <div class="hero-stat">
-                        <strong>20+</strong>
-                        <span>참여 프로젝트</span>
-                    </div>
-                </div>
-                <div class="hero-cta">
-                    <a href="#work" class="btn btn-primary">경력 보기 →</a>
-                    <a href="#contact" class="btn btn-outline">연락하기</a>
-                </div>
-            </div>
-            <div class="hero-avatar fade-up">
-                <div class="hero-avatar-inner">👨‍💻</div>
-            </div>
+  <!-- HERO / DESKTOP -->
+  <section id="home" class="hero">
+    <div class="hero-stage">
+      <div class="hero-deco hero-cols">
+        <span>about / 소개</span><span>portfolio / works</span><span>contact / 연락</span>
+      </div>
+
+      <div class="px hero-type" data-depth="-14">
+        <div class="hero-script">publisher</div>
+        <div class="hero-headline">portfolio</div>
+        <div class="hero-year">(2026)</div>
+        <div class="hero-meta">황원홍 HWANG WONHONG · 웹퍼블리셔 WEB PUBLISHER</div>
+        <div class="hero-meta">ownwebtexture@gmail.com · 개발경력 8년 4개월</div>
+      </div>
+
+      <a href="#about" class="px hero-deco folder-link" data-depth="26" style="left:44px;top:150px">
+        <span class="fold">
+          <svg width="104" height="84" viewBox="0 0 112 90"><path class="fa" d="M4 16c0-5 4-9 9-9h27c3 0 5 1 7 3l6 6c2 2 4 3 7 3h36c5 0 9 4 9 9v43c0 5-4 9-9 9H13c-5 0-9-4-9-9V16z"></path><path class="fb" d="M4 30h104v39c0 5-4 9-9 9H13c-5 0-9-4-9-9V30z"></path><rect class="fh" x="4" y="30" width="104" height="3"></rect></svg>
+          <span class="folder-label">about</span>
+        </span>
+      </a>
+      <a href="#skills" class="px hero-deco folder-link" data-depth="34" style="left:96px;top:492px">
+        <span class="fold">
+          <svg width="104" height="84" viewBox="0 0 112 90"><path class="fa" d="M4 16c0-5 4-9 9-9h27c3 0 5 1 7 3l6 6c2 2 4 3 7 3h36c5 0 9 4 9 9v43c0 5-4 9-9 9H13c-5 0-9-4-9-9V16z"></path><path class="fb" d="M4 30h104v39c0 5-4 9-9 9H13c-5 0-9-4-9-9V30z"></path><rect class="fh" x="4" y="30" width="104" height="3"></rect></svg>
+          <span class="folder-label">skills</span>
+        </span>
+      </a>
+      <a href="#works" class="px hero-deco folder-link" data-depth="22" style="left:920px;top:168px">
+        <span class="fold">
+          <svg width="122" height="98" viewBox="0 0 112 90"><path class="fa" d="M4 16c0-5 4-9 9-9h27c3 0 5 1 7 3l6 6c2 2 4 3 7 3h36c5 0 9 4 9 9v43c0 5-4 9-9 9H13c-5 0-9-4-9-9V16z"></path><path class="fb" d="M4 30h104v39c0 5-4 9-9 9H13c-5 0-9-4-9-9V30z"></path><rect class="fh" x="4" y="30" width="104" height="3"></rect></svg>
+          <span class="folder-label folder-label--bold">works</span>
+        </span>
+      </a>
+      <a href="#contact" class="px hero-deco folder-link" data-depth="30" style="left:1010px;top:496px">
+        <span class="fold">
+          <svg width="104" height="84" viewBox="0 0 112 90"><path class="fa" d="M4 16c0-5 4-9 9-9h27c3 0 5 1 7 3l6 6c2 2 4 3 7 3h36c5 0 9 4 9 9v43c0 5-4 9-9 9H13c-5 0-9-4-9-9V16z"></path><path class="fb" d="M4 30h104v39c0 5-4 9-9 9H13c-5 0-9-4-9-9V30z"></path><rect class="fh" x="4" y="30" width="104" height="3"></rect></svg>
+          <span class="folder-label">contact</span>
+        </span>
+      </a>
+
+      <div class="px hero-deco cursor" data-depth="40" style="left:1030px;top:262px">
+        <svg width="40" height="42" viewBox="0 0 30 32"><path d="M4 2 L4 24 L10 18 L14 27 L18 25 L14 16 L22 16 Z" class="cursor-path" stroke-width="1.6" stroke-linejoin="round"></path></svg>
+      </div>
+
+      <div class="px hero-deco file" data-depth="16" style="left:158px;top:298px">
+        <div class="file-thumb" style="background:linear-gradient(150deg,#f7c59f,#e3888a)"></div>
+        <span class="file-name">samsung_sdi.jpeg</span>
+      </div>
+      <div class="px hero-deco file" data-depth="20" style="left:786px;top:506px">
+        <div class="file-thumb" style="background:linear-gradient(150deg,#a7c5eb,#6d8ec4)"></div>
+        <span class="file-name">hyosung_tnc.jpeg</span>
+      </div>
+
+      <div class="hero-dock">
+        <a href="#skills" class="dock-app" style="background:#e44d26;color:#fff">HTML</a>
+        <a href="#skills" class="dock-app" style="background:#1572b6;color:#fff">CSS</a>
+        <a href="#skills" class="dock-app" style="background:#cc6699;color:#fff">Sass</a>
+        <a href="#skills" class="dock-app" style="background:#f7df1e;color:#111">JS</a>
+        <a href="#skills" class="dock-app" style="background:#0769ad;color:#fff">jQ</a>
+      </div>
+
+      <a href="#about" class="hero-deco scroll-hint">
+        <span>SCROLL</span><span class="scroll-arrow">↓</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section section--about">
+    <div class="container">
+      <div class="reveal sec-head">
+        <span class="sec-num">01 / ABOUT</span>
+        <span class="sec-rule"></span>
+      </div>
+      <div class="reveal window">
+        <div class="window-bar">
+          <span class="traffic"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i></span>
+          <span class="window-title">about — 소개.txt</span>
         </div>
-    </section>
-
-    <!-- WORK EXPERIENCE -->
-    <section id="work">
-        <div class="container">
-            <div class="fade-up">
-                <span class="section-label">Work Experience</span>
-                <h2 class="section-title">경력 사항</h2>
-                <p class="section-sub">이전 회사에서 진행한 주요 작업물과 성과입니다.</p>
+        <div class="about-grid">
+          <div class="about-side">
+            <div class="avatar">황</div>
+            <div class="about-name">황원홍</div>
+            <div class="about-name-en">HWANG WONHONG</div>
+            <div class="about-facts">
+              <div><span class="fact-key">ROLE</span><br>웹퍼블리셔 · 8년차</div>
+              <div><span class="fact-key">EMAIL</span><br>ownwebtexture@gmail.com</div>
             </div>
-            <div class="work-list">
-
-                <div class="work-card fade-up">
-                    <div class="work-header">
-                        <div class="work-company-info">
-                            <h3 class="work-company">(주)픽셀웍스</h3>
-                            <p class="work-role">웹 퍼블리셔</p>
-                            <span class="work-period">2022.09 — 2025.02 · 2년 6개월</span>
-                        </div>
-                        <span class="work-badge">정규직</span>
-                    </div>
-                    <div class="work-body">
-                        <ul class="work-desc">
-                            <li>이커머스·브랜드 사이트·관리자 시스템 등 다양한 유형의 반응형 퍼블리싱 수행</li>
-                            <li>Figma 시안 기반 SCSS BEM 방법론 적용으로 컴포넌트 재사용성 및 유지보수성 향상</li>
-                            <li>GSAP ScrollTrigger를 활용한 인터랙티브 스크롤 애니메이션 구현</li>
-                            <li>크로스브라우징(Chrome·Safari·Firefox·Edge) 대응 및 WCAG 2.1 웹 접근성 기준 준수</li>
-                            <li>퍼블리싱 가이드 문서 작성 및 신규 팀원 온보딩 지원</li>
-                        </ul>
-                        <div class="work-stats">
-                            <div class="work-stat">
-                                <strong>80+</strong>
-                                <span>퍼블리싱 페이지</span>
-                            </div>
-                            <div class="work-stat">
-                                <strong>15개</strong>
-                                <span>참여 프로젝트</span>
-                            </div>
-                            <div class="work-stat">
-                                <strong>4개</strong>
-                                <span>지원 브라우저</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="work-card fade-up">
-                    <div class="work-header">
-                        <div class="work-company-info">
-                            <h3 class="work-company">스튜디오 포맷</h3>
-                            <p class="work-role">웹 퍼블리셔</p>
-                            <span class="work-period">2020.03 — 2022.08 · 2년 6개월</span>
-                        </div>
-                        <span class="work-badge">정규직</span>
-                    </div>
-                    <div class="work-body">
-                        <ul class="work-desc">
-                            <li>쇼핑몰·기업 홈페이지·랜딩페이지 HTML / CSS / jQuery 기반 퍼블리싱 담당</li>
-                            <li>Swiper.js 슬라이더, 탭·아코디언 등 공통 UI 컴포넌트 개발 및 라이브러리화</li>
-                            <li>모바일 퍼스트 반응형 그리드 시스템 도입으로 작업 시간 약 30% 단축</li>
-                            <li>디자인팀·개발팀 간 커뮤니케이션 담당, 퍼블리싱 산출물 기한 내 100% 납품</li>
-                        </ul>
-                        <div class="work-stats">
-                            <div class="work-stat">
-                                <strong>40+</strong>
-                                <span>납품 페이지</span>
-                            </div>
-                            <div class="work-stat">
-                                <strong>30%</strong>
-                                <span>작업 시간 단축</span>
-                            </div>
-                            <div class="work-stat">
-                                <strong>100%</strong>
-                                <span>납기 준수율</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+          </div>
+          <div class="about-body">
+            <p class="about-lead">탄탄한 기본기로 8년간 웹사이트를 만들어온 웹퍼블리셔 황원홍입니다. 픽셀 하나까지 챙기는 정확함과, 기획·디자인·개발과 매끄럽게 맞물리는 협업으로 <b>퀄리티와 일정을 함께 지키는 퍼블리싱</b>을 지향합니다.</p>
+            <div class="val-grid">
+              <div class="val-card"><div class="val-title">기본기</div><div class="val-desc">시맨틱·웹표준·접근성을 지키는 견고한 마크업</div></div>
+              <div class="val-card"><div class="val-title">픽셀 퍼펙트</div><div class="val-desc">디자인 의도를 1px 오차 없이 구현</div></div>
+              <div class="val-card"><div class="val-title">협업</div><div class="val-desc">기획·디자인·개발과 유연하게 소통</div></div>
             </div>
+            <div class="timeline">
+              <div class="timeline-row timeline-row--border"><span class="timeline-date">2016.08 – 2024.11</span><span class="timeline-desc"><b>와이즈킷</b> 개발팀 · 8년 4개월</span></div>
+              <div class="timeline-row"><span class="timeline-date">2012.02</span><span class="timeline-desc"><b>상지대학교</b> 생활조형디자인학과 졸업</span></div>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- PROJECTS -->
-    <section id="projects">
-        <div class="container">
-            <div class="fade-up">
-                <span class="section-label">Projects</span>
-                <h2 class="section-title">개인 프로젝트</h2>
-                <p class="section-sub">개인적으로 기획하고 제작한 작업물입니다.</p>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card fade-up">
-                    <div class="project-thumb project-thumb-1">☕</div>
-                    <div class="project-body">
-                        <p class="project-type">Brand · Landing</p>
-                        <h3 class="project-title">Brewly — 카페 브랜드 사이트</h3>
-                        <p class="project-desc">
-                            스페셜티 커피 브랜드의 아이덴티티를 담은 반응형 브랜드 사이트.
-                            GSAP ScrollTrigger로 패럴렉스 및 텍스트 리빌 애니메이션을 구현했습니다.
-                        </p>
-                        <div class="project-footer">
-                            <div class="project-tags">
-                                <span class="project-tag">HTML</span>
-                                <span class="project-tag">SCSS</span>
-                                <span class="project-tag">GSAP</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/hwhmmm/brewly" target="_blank" rel="noopener" class="project-link">GitHub →</a>
-                                <a href="#" class="project-link">Live →</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  <!-- SKILLS -->
+  <section id="skills" class="section section--skills">
+    <div class="container">
+      <div class="reveal sec-head">
+        <span class="sec-num">02 / SKILLS</span>
+        <span class="sec-rule"></span>
+        <span class="sec-tail">기술 스택</span>
+      </div>
+      <div class="reveal skills-grid">
+        <div class="appt"><div class="skill-icon" style="background:#e44d26;color:#fff;font-size:20px">HTML</div><div><div class="skill-name">HTML5</div><div class="skill-desc">시맨틱 마크업</div></div></div>
+        <div class="appt"><div class="skill-icon" style="background:#1572b6;color:#fff;font-size:24px">CSS</div><div><div class="skill-name">CSS3</div><div class="skill-desc">반응형·애니메이션</div></div></div>
+        <div class="appt"><div class="skill-icon" style="background:#cc6699;color:#fff;font-size:22px">Sass</div><div><div class="skill-name">Sass / SCSS</div><div class="skill-desc">구조적 스타일 설계</div></div></div>
+        <div class="appt"><div class="skill-icon" style="background:#f7df1e;color:#111;font-size:28px">JS</div><div><div class="skill-name">JavaScript</div><div class="skill-desc">인터랙션 구현</div></div></div>
+        <div class="appt"><div class="skill-icon" style="background:#0769ad;color:#fff;font-size:22px">jQ</div><div><div class="skill-name">jQuery</div><div class="skill-desc">DOM · 플러그인</div></div></div>
+      </div>
+      <div class="reveal toolchain">
+        <span class="toolchain-label">TOOLCHAIN —</span>
+        <span class="chip">GSAP · ScrollTrigger</span>
+        <span class="chip">gulp</span>
+        <span class="chip">Sass 컴파일 · autoprefixer</span>
+        <span class="chip">Git</span>
+        <span class="chip">반응형 · 모바일 퍼스트</span>
+      </div>
+    </div>
+  </section>
 
-                <div class="project-card fade-up">
-                    <div class="project-thumb project-thumb-2">👗</div>
-                    <div class="project-body">
-                        <p class="project-type">E-Commerce</p>
-                        <h3 class="project-title">Modhaus — 패션 쇼핑몰 UI</h3>
-                        <p class="project-desc">
-                            모바일 퍼스트로 구현한 패션 브랜드 쇼핑몰 UI.
-                            상품 필터, 무한 스크롤, 장바구니 인터랙션을 바닐라 JS로 처리했습니다.
-                        </p>
-                        <div class="project-footer">
-                            <div class="project-tags">
-                                <span class="project-tag">HTML</span>
-                                <span class="project-tag">SCSS</span>
-                                <span class="project-tag">JavaScript</span>
-                                <span class="project-tag">Swiper</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/hwhmmm/modhaus" target="_blank" rel="noopener" class="project-link">GitHub →</a>
-                                <a href="#" class="project-link">Live →</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  <!-- WORKS -->
+  <section id="works" class="section section--works">
+    <div class="container">
+      <div class="reveal sec-head">
+        <span class="sec-num">03 / WORKS</span>
+        <span class="sec-rule"></span>
+        <span class="sec-tail">06 projects</span>
+      </div>
+      <div class="reveal works-title"><span class="works-title-em">Works</span></div>
+      <div class="works-grid">
+        <a href="https://www.hyosungtnc.com" target="_blank" rel="noopener" class="gcard reveal">
+          <div class="gcard-thumb" style="background:linear-gradient(150deg,#f7c59f,#e3888a)"><span class="gcard-file">hyosung_tnc.jpeg</span></div>
+          <div class="gcard-body"><div class="gcard-head"><b class="gcard-title">효성 TNC</b><span class="badge">회사</span></div><div class="gcard-meta">2023.08–2024.01 · 참여도 50% · 반응형</div><div class="gcard-foot"><span class="gcard-url">hyosungtnc.com</span><span class="gcard-go">↗</span></div></div>
+        </a>
+        <a href="https://www.hyosungchemical.com" target="_blank" rel="noopener" class="gcard reveal">
+          <div class="gcard-thumb" style="background:linear-gradient(150deg,#a7c5eb,#6d8ec4)"><span class="gcard-file">hyosung_chemical.jpeg</span></div>
+          <div class="gcard-body"><div class="gcard-head"><b class="gcard-title">효성화학</b><span class="badge">회사</span></div><div class="gcard-meta">2023.01–2023.08 · 참여도 50% · 반응형</div><div class="gcard-foot"><span class="gcard-url">hyosungchemical.com</span><span class="gcard-go">↗</span></div></div>
+        </a>
+        <a href="https://www.hyosungtextile.com" target="_blank" rel="noopener" class="gcard reveal">
+          <div class="gcard-thumb" style="background:linear-gradient(150deg,#c8b6e2,#9b7fc4)"><span class="gcard-file">hyosung_textile.jpeg</span></div>
+          <div class="gcard-body"><div class="gcard-head"><b class="gcard-title">효성섬유</b><span class="badge">회사</span></div><div class="gcard-meta">2022.05–2023.10 · 참여도 50% · 반응형</div><div class="gcard-foot"><span class="gcard-url">hyosungtextile.com</span><span class="gcard-go">↗</span></div></div>
+        </a>
+        <a href="https://www.lsems.com" target="_blank" rel="noopener" class="gcard reveal">
+          <div class="gcard-thumb" style="background:linear-gradient(150deg,#a8e6cf,#5cae8f)"><span class="gcard-file">ls_emobility.jpeg</span></div>
+          <div class="gcard-body"><div class="gcard-head"><b class="gcard-title">LS e-Mobility</b><span class="badge">회사</span></div><div class="gcard-meta">2022.03–2022.05 · 참여도 100% · 적응형</div><div class="gcard-foot"><span class="gcard-url">lsems.com</span><span class="gcard-go">↗</span></div></div>
+        </a>
+        <a href="https://www.royalcopenhagen.co.kr" target="_blank" rel="noopener" class="gcard reveal">
+          <div class="gcard-thumb" style="background:linear-gradient(150deg,#f6d5d5,#d99bb0)"><span class="gcard-file">royal_copenhagen.jpeg</span></div>
+          <div class="gcard-body"><div class="gcard-head"><b class="gcard-title">로얄코펜하겐 e-com</b><span class="badge">회사</span></div><div class="gcard-meta">2021.11–2022.02 · 참여도 100% · 반응형</div><div class="gcard-foot"><span class="gcard-url">royalcopenhagen.co.kr</span><span class="gcard-go">↗</span></div></div>
+        </a>
+        <a href="https://www.h-point.co.kr" target="_blank" rel="noopener" class="gcard reveal">
+          <div class="gcard-thumb" style="background:linear-gradient(150deg,#ffe0a3,#e8b45c)"><span class="gcard-file">h_point.jpeg</span></div>
+          <div class="gcard-body"><div class="gcard-head"><b class="gcard-title">H.Point</b><span class="badge">회사</span></div><div class="gcard-meta">2021.08–2021.12 · 참여도 50% · 반응형</div><div class="gcard-foot"><span class="gcard-url">h-point.co.kr</span><span class="gcard-go">↗</span></div></div>
+        </a>
+      </div>
+    </div>
+  </section>
 
-                <div class="project-card fade-up">
-                    <div class="project-thumb project-thumb-3">🚀</div>
-                    <div class="project-body">
-                        <p class="project-type">App · Landing</p>
-                        <h3 class="project-title">Taskly — 앱 서비스 랜딩페이지</h3>
-                        <p class="project-desc">
-                            생산성 앱 출시에 맞춰 제작한 프로모션 랜딩페이지.
-                            섹션별 스크롤 애니메이션과 디바이스 목업 전환 효과를 구현했습니다.
-                        </p>
-                        <div class="project-footer">
-                            <div class="project-tags">
-                                <span class="project-tag">HTML</span>
-                                <span class="project-tag">SCSS</span>
-                                <span class="project-tag">GSAP</span>
-                                <span class="project-tag">Swiper</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/hwhmmm/taskly-landing" target="_blank" rel="noopener" class="project-link">GitHub →</a>
-                                <a href="#" class="project-link">Live →</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  <!-- CONTACT -->
+  <section id="contact" class="section section--contact">
+    <div class="contact-inner">
+      <div class="reveal c-script">let's work together</div>
+      <div class="reveal c-title">함께 만들어요</div>
+      <p class="reveal c-lead">채용·협업 제안 언제든 환영합니다. 아래 메일로 연락 주시면 빠르게 회신드릴게요.</p>
+      <a href="mailto:ownwebtexture@gmail.com" class="reveal c-cta">✉ ownwebtexture@gmail.com</a>
+      <div class="reveal c-sign">HWANG WONHONG · WEB PUBLISHER · SINCE 2016</div>
+    </div>
+  </section>
 
-            </div>
-        </div>
-    </section>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <span class="footer-copy">© 2026 HWANG WONHONG. Built with HTML5 · SCSS · JavaScript.</span>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#works">Works</a>
+      <a href="#contact">Contact</a>
+      <button class="tgl" type="button" data-theme-toggle><span class="sun">☀ Light</span><span class="moon">☾ Dark</span></button>
+    </div>
+  </footer>
 
-    <!-- SKILLS -->
-    <section id="skills">
-        <div class="container">
-            <div class="fade-up">
-                <span class="section-label">Skills</span>
-                <h2 class="section-title">기술 스택</h2>
-                <p class="section-sub">다양한 환경에서 실무 경험을 쌓아온 기술들입니다.</p>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-card fade-up">
-                    <div class="skill-card-title">
-                        <div class="skill-icon">🏗️</div>
-                        마크업 / 스타일
-                    </div>
-                    <div class="skill-tags">
-                        <span class="tag">HTML5</span>
-                        <span class="tag">CSS3</span>
-                        <span class="tag">Sass/SCSS</span>
-                        <span class="tag">시맨틱 마크업</span>
-                        <span class="tag">반응형 웹</span>
-                        <span class="tag">크로스브라우징</span>
-                        <span class="tag">웹표준</span>
-                        <span class="tag">웹 접근성</span>
-                    </div>
-                </div>
-                <div class="skill-card fade-up">
-                    <div class="skill-card-title">
-                        <div class="skill-icon">⚡</div>
-                        인터랙션 / 스크립트
-                    </div>
-                    <div class="skill-tags">
-                        <span class="tag">JavaScript (ES6+)</span>
-                        <span class="tag">jQuery</span>
-                        <span class="tag">Swiper.js</span>
-                        <span class="tag">GSAP</span>
-                    </div>
-                </div>
-                <div class="skill-card fade-up">
-                    <div class="skill-card-title">
-                        <div class="skill-icon">🛠️</div>
-                        툴 / 협업
-                    </div>
-                    <div class="skill-tags">
-                        <span class="tag">Git / GitHub</span>
-                        <span class="tag">Figma</span>
-                        <span class="tag">Photoshop</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <a href="#home" class="topbtn" id="topbtn">↑</a>
 
-    <!-- CONTACT -->
-    <section id="contact">
-        <div class="container">
-            <div class="fade-up">
-                <span class="section-label">Contact</span>
-                <h2 class="section-title">연락하기</h2>
-                <p class="section-sub">프로젝트 협업이나 채용 문의는 언제든 환영합니다.</p>
-            </div>
-            <div class="contact-grid fade-up">
-                <div class="contact-text">
-                    <p>
-                        새로운 기회와 협업을 적극적으로 찾고 있습니다.<br />
-                        간단한 인사부터 시작해도 좋습니다. 연락 주시면 빠르게 답변 드리겠습니다.
-                    </p>
-                    <div class="contact-links">
-                        <a href="mailto:hwhmmm@gmail.com" class="contact-link">
-                            <div class="contact-link-icon">📧</div>
-                            <div class="contact-link-info">
-                                <strong>이메일</strong>
-                                <span>hwhmmm@gmail.com</span>
-                            </div>
-                        </a>
-                        <a href="https://github.com/hwhmmm" target="_blank" rel="noopener" class="contact-link">
-                            <div class="contact-link-icon">🐙</div>
-                            <div class="contact-link-info">
-                                <strong>GitHub</strong>
-                                <span>github.com/hwhmmm</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <form class="contact-form" onsubmit="handleSubmit(event)">
-                    <div class="form-group">
-                        <label class="form-label">이름</label>
-                        <input type="text" class="form-input" placeholder="홍길동" required />
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">이메일</label>
-                        <input type="email" class="form-input" placeholder="example@email.com" required />
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">메시지</label>
-                        <textarea class="form-textarea" placeholder="안녕하세요! 협업 문의드립니다..." required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-white">메시지 보내기 →</button>
-                </form>
-            </div>
-        </div>
-    </section>
+</div>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2026 <a href="#">Hwang Wonhong</a>. Designed & Built with care.</p>
-    </footer>
-
-    <script src="script.js"></script>
-
+<script src="src/js/main.js"></script>
 </body>
-
 </html>

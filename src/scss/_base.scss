@@ -1,0 +1,33 @@
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--sans)}
+a{color:inherit;text-decoration:none}
+
+.wrap{
+  min-height:100vh;
+  background:radial-gradient(130% 100% at 50% 0%,var(--bg1),var(--bg2));
+  color:var(--ink);
+  transition:background .5s ease,color .5s ease;
+}
+.container{max-width:1080px;margin:0 auto}
+
+/* ---------- Section shells ---------- */
+.section{padding:80px 40px}
+.section--about{padding:120px 40px}
+.section--skills{padding:60px 40px 120px}
+.section--works{padding:80px 40px 110px;background:var(--band);transition:background .5s}
+.section--contact{padding:130px 40px 120px;text-align:center;position:relative;overflow:hidden}
+[id]{scroll-margin-top:70px}
+
+.sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:38px}
+.sec-num{font:400 13px var(--mono);letter-spacing:.14em;color:var(--ink3)}
+.sec-rule{flex:1;height:1px;background:var(--line)}
+.sec-tail{font:400 13px var(--mono);color:var(--ink3)}
+
+/* ---------- Reveal ---------- */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .75s cubic-bezier(.2,.8,.2,1),transform .75s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- Keyframes ---------- */
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}

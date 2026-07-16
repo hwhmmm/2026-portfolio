@@ -1,0 +1,71 @@
+#!/usr/bin/env bash
+# ./fable — Fable 오케스트레이션 스위치 (2026-portfolio-new 프로젝트 전용 토글)
+#
+# 본체는 .claude/fable/ 한 곳에만 있고, 로딩 코드는 세 군데:
+#   1. CLAUDE.md 끝의 @.claude/fable/active.md 한 줄        (선언)
+#   2. .claude/agents/ 의 deep-reasoner/runner               (역할 배정)
+#   3. .claude/settings.json 의 PreToolUse 게이트 훅 + env    (강제 장치 + 리매핑)
+#
+#   fable on      상태=on,  active.md <- fable.md 복사, 리매핑 env 추가
+#   fable off     상태=off, active.md <- empty.md 복사, 리매핑 env 제거
+#   fable status  상태와 로딩 코드 설치 여부 점검
+#
+# 적용 시점: 다음에 새로 시작하는 claude 세션부터 (떠 있는 세션은 영향 없음).
+set -u
+DIR="$(cd "$(dirname "$0")" && pwd)"
+FABLE_DIR="$DIR/.claude/fable"
+STATE="$FABLE_DIR/.fable-state"
+SETTINGS="$DIR/.claude/settings.json"
+
+set_env() {  # $1 = on|off : settings.json 의 Sonnet->Opus 리매핑 토글
+  python3 - "$SETTINGS" "$1" <<'PYEOF'
+import json, sys
+p, mode = sys.argv[1], sys.argv[2]
+try:
+    d = json.load(open(p))
+except Exception:
+    d = {}
+env = d.setdefault("env", {})
+if mode == "on":
+    env["ANTHROPIC_DEFAULT_SONNET_MODEL"] = "claude-opus-4-8"
+else:
+    env.pop("ANTHROPIC_DEFAULT_SONNET_MODEL", None)
+if not env:
+    d.pop("env", None)
+json.dump(d, open(p, "w"), indent=2, ensure_ascii=False)
+open(p, "a").write("\n")
+PYEOF
+}
+
+case "${1:-status}" in
+  on)
+    echo on > "$STATE"
+    cp "$FABLE_DIR/fable.md" "$FABLE_DIR/active.md"
+    set_env on
+    echo "Fable 오케스트레이션 ON — 다음 claude 세션부터 적용됩니다."
+    ;;
+  off)
+    echo off > "$STATE"
+    cp "$FABLE_DIR/empty.md" "$FABLE_DIR/active.md"
+    set_env off
+    echo "Fable 오케스트레이션 OFF — 다음 claude 세션부터 일반 모드입니다."
+    ;;
+  status)
+    s=$(cat "$STATE" 2>/dev/null || echo off)
+    echo "Fable 오케스트레이션: $(echo "$s" | tr '[:lower:]' '[:upper:]')"
+    grep -q 'fable/active.md' "$DIR/CLAUDE.md" 2>/dev/null && ok='[OK]' || ok='[--]'
+    echo "  $ok @import        CLAUDE.md"
+    [ -f "$DIR/.claude/agents/deep-reasoner.md" ] && [ -f "$DIR/.claude/agents/runner.md" ] && ok='[OK]' || ok='[--]'
+    echo "  $ok agents         .claude/agents"
+    grep -q 'orchestration-gate' "$SETTINGS" 2>/dev/null && ok='[OK]' || ok='[--]'
+    echo "  $ok 게이트 훅      .claude/settings.json"
+    [ -f "$FABLE_DIR/hooks/orchestration-gate.py" ] && ok='[OK]' || ok='[--]'
+    echo "  $ok 게이트 스크립트 .claude/fable/hooks/orchestration-gate.py"
+    grep -q 'ANTHROPIC_DEFAULT_SONNET_MODEL' "$SETTINGS" 2>/dev/null && ok='[OK]' || ok='[--]'
+    echo "  $ok Sonnet→Opus 리매핑 (settings.json env)"
+    ;;
+  *)
+    echo "사용법: ./fable on | off | status" >&2
+    exit 1
+    ;;
+esac

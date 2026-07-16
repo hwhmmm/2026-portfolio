@@ -1,0 +1,10 @@
+/* ---------- Skills ---------- */
+.skills-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:22px}
+.appt{display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center;transition:transform .2s cubic-bezier(.2,.8,.2,1)}
+.appt:hover{transform:translateY(-6px) rotate(-2deg)}
+.skill-icon{width:96px;height:96px;border-radius:24px;display:flex;align-items:center;justify-content:center;font-weight:800;font-family:var(--sans);box-shadow:var(--shadow)}
+.skill-name{font:700 14px var(--sans)}
+.skill-desc{font:400 11.5px/1.4 var(--sans);color:var(--ink3);margin-top:3px}
+.toolchain{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:44px}
+.toolchain-label{font:400 12px var(--mono);color:var(--ink3);align-self:center}
+.chip{padding:7px 14px;border:1px solid var(--line);border-radius:20px;font:400 12.5px var(--sans);color:var(--ink2)}
