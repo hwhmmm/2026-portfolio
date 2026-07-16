@@ -1,6 +1,4 @@
 /* ---------- Works ---------- */
-.works-title{font-family:var(--serif);font-weight:900;font-size:64px;letter-spacing:-.03em;margin-bottom:40px}
-.works-title-em{font-style:italic;color:var(--dust)}
 .works-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .gcard{display:block;background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:transform .22s cubic-bezier(.2,.8,.2,1),box-shadow .22s,border-color .22s}
 .gcard:hover{transform:translateY(-7px);box-shadow:var(--shadow)}

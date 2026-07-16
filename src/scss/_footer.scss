@@ -16,6 +16,20 @@
 }
 
 /* ---------- Responsive ---------- */
+/* 821~1240px: 1200px 고정 히어로 스테이지를 비율 유지한 채 축소 */
+@media (max-width:1240px) and (min-width:821px){
+  .hero-stage{
+    margin-left:calc((100% - 1200px) / 2);
+    transform:scale(.84);
+    transform-origin:50% 46%;
+  }
+}
+@media (max-width:1024px) and (min-width:821px){
+  .hero-stage{transform:scale(.74)}
+}
+@media (max-width:920px) and (min-width:821px){
+  .hero-stage{transform:scale(.67)}
+}
 @media (max-width:1024px){
   .works-grid{grid-template-columns:repeat(2,1fr)}
   .skills-grid{grid-template-columns:repeat(3,1fr)}
@@ -35,9 +49,7 @@
   .val-grid{grid-template-columns:1fr}
   .about-body{padding:30px 24px}
   .c-script{font-size:clamp(38px,10vw,60px)}
-  .c-title{font-size:clamp(44px,12vw,76px)}
-  .works-title{font-size:clamp(44px,12vw,62px)}
-}
+  .c-title{font-size:clamp(44px,12vw,76px)}}
 @media (max-width:560px){
   .works-grid{grid-template-columns:1fr}
   .skills-grid{grid-template-columns:repeat(2,1fr)}

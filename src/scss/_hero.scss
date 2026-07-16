@@ -3,11 +3,6 @@
 .hero-stage{position:relative;width:1200px;height:100%;margin:0 auto}
 .px{transform:translate(var(--tx,0),var(--ty,0));transition:transform .3s ease-out}
 
-.hero-cols{
-  position:absolute;top:22px;left:0;right:0;
-  display:flex;justify-content:space-between;padding:0 4px;
-  font:400 13px var(--mono);letter-spacing:.06em;color:var(--ink3);
-}
 .hero-type{
   position:absolute;top:20%;left:50%;margin-left:-320px;width:640px;
   text-align:center;pointer-events:none;z-index:2;
@@ -47,7 +42,7 @@
 .dock-app:hover{transform:translateY(-10px) scale(1.08)}
 
 .scroll-hint{
-  position:absolute;left:50%;bottom:104px;transform:translateX(-50%);z-index:4;
+  position:absolute;left:50%;bottom:130px;transform:translateX(-50%);z-index:4;
   display:flex;flex-direction:column;align-items:center;gap:6px;
   font:400 11px var(--mono);letter-spacing:.1em;color:var(--ink3);
 }

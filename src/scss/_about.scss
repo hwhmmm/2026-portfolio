@@ -7,7 +7,7 @@
 
 .about-grid{display:grid;grid-template-columns:300px 1fr}
 .about-side{padding:38px 32px;border-right:1px solid var(--line);background:var(--panel2)}
-.avatar{width:120px;height:120px;border-radius:20px;background:linear-gradient(150deg,var(--fold-b),var(--fold-a));display:flex;align-items:center;justify-content:center;font:900 40px var(--serif);color:#fff;box-shadow:var(--shadow)}
+.avatar{width:120px;height:120px;border-radius:20px;background:linear-gradient(150deg,var(--fold-b),var(--fold-a));display:flex;align-items:center;justify-content:center;font:900 40px var(--sans);color:#fff;box-shadow:var(--shadow)}
 .about-name{font:700 22px var(--sans);margin-top:22px}
 .about-name-en{font:400 13px var(--mono);color:var(--ink3);margin-top:4px}
 .about-facts{margin-top:20px;display:flex;flex-direction:column;gap:9px;font:400 13px var(--sans);color:var(--ink2)}
@@ -17,7 +17,7 @@
 .about-lead{font:400 20px/1.75 var(--sans);color:var(--ink);margin:0;text-wrap:pretty}
 .val-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:32px}
 .val-card{padding:20px 18px;border:1px solid var(--line);border-radius:14px}
-.val-title{font:900 26px var(--serif);color:var(--accent)}
+.val-title{font:900 26px var(--sans);color:var(--accent)}
 .val-desc{font:400 12.5px/1.5 var(--sans);color:var(--ink2);margin-top:8px}
 .timeline{margin-top:30px;display:flex;flex-direction:column;gap:12px}
 .timeline-row{display:flex;gap:16px;align-items:baseline}
