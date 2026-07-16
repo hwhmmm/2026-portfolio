@@ -1,0 +1,18 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write|NotebookEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/fable/hooks/orchestration-gate.py\""
+          }
+        ]
+      }
+    ]
+  },
+  "env": {
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-opus-4-8"
+  }
+}
