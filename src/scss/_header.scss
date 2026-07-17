@@ -12,7 +12,6 @@
 .mbar-brand{color:var(--ink)}
 .mnav{display:flex;gap:26px}
 .mbar-right{display:flex;align-items:center;gap:14px}
-.mbar-time{color:var(--ink2);font-weight:400}
 
 .navk{position:relative;cursor:pointer;color:var(--ink2);font-weight:400;transition:color .2s}
 .navk::after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:2px;background:var(--ink);transition:width .24s cubic-bezier(.2,.8,.2,1)}
