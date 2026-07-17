@@ -1,0 +1,21 @@
+/* ---------- Work detail ---------- */
+.wd{padding:110px 40px 80px;min-height:calc(100vh - 160px)}
+.wd-container{max-width:860px;margin:0 auto}
+.wd-back{display:inline-block;font:400 13px var(--mono);color:var(--ink2);margin-bottom:26px;transition:color .2s}
+.wd-back:hover{color:var(--ink)}
+.wd-head{display:flex;align-items:center;gap:14px}
+.wd-title{font:900 56px var(--sans);letter-spacing:-.03em;margin:0}
+.wd-lead{font-size:16px;line-height:1.75;color:var(--ink2);margin:18px 0 0}
+.wd-meta{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:30px;padding:22px 24px;background:var(--panel);border:1px solid var(--line);border-radius:14px;font-size:14px;line-height:1.6}
+.wd-meta a{color:var(--accent)}
+.wd-shot{position:relative;aspect-ratio:16/9;border-radius:16px;margin-top:34px;box-shadow:var(--shadow)}
+.wd-sub{font:800 22px var(--sans);margin:44px 0 14px}
+.wd-points{margin:0;padding-left:20px;line-height:1.9;color:var(--ink2)}
+.wd-nav{display:flex;justify-content:space-between;margin-top:56px;padding-top:22px;border-top:1px solid var(--line);font:400 13px var(--mono)}
+.wd-nav a{color:var(--ink2);transition:color .2s}
+.wd-nav a:hover{color:var(--ink)}
+@media (max-width:820px){
+  .wd{padding:90px 20px 60px}
+  .wd-title{font-size:38px}
+  .wd-meta{grid-template-columns:repeat(2,1fr)}
+}
