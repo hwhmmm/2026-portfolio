@@ -1,5 +1,6 @@
 /* ---------- Works ---------- */
 .works-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.works-grid .reveal{transition-duration:.95s}
 .gcard{display:block;background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:transform .22s cubic-bezier(.2,.8,.2,1),box-shadow .22s,border-color .22s}
 .gcard:hover{transform:translateY(-7px);box-shadow:var(--shadow)}
 .gcard-thumb{position:relative;aspect-ratio:16/11}

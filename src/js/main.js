@@ -45,7 +45,7 @@
   const reveals = document.querySelectorAll('.reveal');
   const worksGrid = document.querySelector('.works-grid');
   if ('IntersectionObserver' in window) {
-    const rio = new IntersectionObserver((entries) => {
+    const revealCb = (entries, obs) => {
       entries.forEach((e) => {
         if (!e.isIntersecting) return;
         if (worksGrid && worksGrid.contains(e.target)) {
@@ -54,20 +54,22 @@
           [...worksGrid.children].forEach((c) => {
             if (Math.abs(c.offsetTop - top) < 2 && !c.classList.contains('in')) {
               c.classList.add('in');
-              rio.unobserve(c);
+              obs.unobserve(c);
             }
           });
         } else {
           e.target.classList.add('in');
-          rio.unobserve(e.target);
+          obs.unobserve(e.target);
         }
       });
-    }, { threshold: 0.12 });
+    };
+    const rio = new IntersectionObserver(revealCb, { threshold: 0.12 });
+    /* works 카드는 더 많이 보였을 때 등장 (타이밍 지연) */
+    const wio = new IntersectionObserver(revealCb, { threshold: 0.35 });
     reveals.forEach((el, i) => {
-      el.style.transitionDelay = (worksGrid && worksGrid.contains(el))
-        ? '0s'
-        : `${Math.min(i % 3, 2) * 0.08}s`;
-      rio.observe(el);
+      const inWorks = worksGrid && worksGrid.contains(el);
+      el.style.transitionDelay = inWorks ? '0s' : `${Math.min(i % 3, 2) * 0.08}s`;
+      (inWorks ? wio : rio).observe(el);
     });
   } else {
     reveals.forEach((el) => el.classList.add('in'));
