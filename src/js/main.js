@@ -47,17 +47,7 @@
   if ('IntersectionObserver' in window) {
     const revealCb = (entries, obs) => {
       entries.forEach((e) => {
-        if (!e.isIntersecting) return;
-        if (worksGrid && worksGrid.contains(e.target)) {
-          /* works 카드: 같은 줄(offsetTop 동일)을 한 번에 등장 */
-          const top = e.target.offsetTop;
-          [...worksGrid.children].forEach((c) => {
-            if (Math.abs(c.offsetTop - top) < 2 && !c.classList.contains('in')) {
-              c.classList.add('in');
-              obs.unobserve(c);
-            }
-          });
-        } else {
+        if (e.isIntersecting) {
           e.target.classList.add('in');
           obs.unobserve(e.target);
         }
@@ -67,9 +57,8 @@
     /* works 카드는 더 많이 보였을 때 등장 (타이밍 지연) */
     const wio = new IntersectionObserver(revealCb, { threshold: 0.35 });
     reveals.forEach((el, i) => {
-      const inWorks = worksGrid && worksGrid.contains(el);
-      el.style.transitionDelay = inWorks ? '0s' : `${Math.min(i % 3, 2) * 0.08}s`;
-      (inWorks ? wio : rio).observe(el);
+      el.style.transitionDelay = `${Math.min(i % 3, 2) * 0.08}s`;
+      ((worksGrid && worksGrid.contains(el)) ? wio : rio).observe(el);
     });
   } else {
     reveals.forEach((el) => el.classList.add('in'));
