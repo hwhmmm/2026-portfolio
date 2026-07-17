@@ -19,6 +19,13 @@
   try { saved = localStorage.getItem('wh-theme'); } catch {}
   if (saved === 'dark') wrap.setAttribute('data-theme', 'dark');
 
+  const toggles = document.querySelectorAll('[data-theme-toggle]');
+  const syncPressed = () => {
+    const dark = wrap.getAttribute('data-theme') === 'dark';
+    toggles.forEach((b) => b.setAttribute('aria-pressed', String(dark)));
+  };
+  syncPressed();
+
   const toggleTheme = () => {
     const isDark = wrap.getAttribute('data-theme') === 'dark';
     if (isDark) {
@@ -28,8 +35,9 @@
       wrap.setAttribute('data-theme', 'dark');
       try { localStorage.setItem('wh-theme', 'dark'); } catch {}
     }
+    syncPressed();
   };
-  document.querySelectorAll('[data-theme-toggle]').forEach((btn) => {
+  toggles.forEach((btn) => {
     btn.addEventListener('click', toggleTheme);
   });
 
@@ -44,7 +52,7 @@
           /* works 카드: 같은 줄(offsetTop 동일)을 한 번에 등장 */
           const top = e.target.offsetTop;
           [...worksGrid.children].forEach((c) => {
-            if (c.offsetTop === top && !c.classList.contains('in')) {
+            if (Math.abs(c.offsetTop - top) < 2 && !c.classList.contains('in')) {
               c.classList.add('in');
               rio.unobserve(c);
             }
@@ -82,16 +90,25 @@
 
   /* ---------- Hero mouse parallax ---------- */
   const pxEls = hero ? hero.querySelectorAll('.px') : [];
-  window.addEventListener('mousemove', (e) => {
-    if (!hero) return;
-    const x = e.clientX / window.innerWidth - 0.5;
-    const y = e.clientY / window.innerHeight - 0.5;
-    pxEls.forEach((el) => {
-      const d = parseFloat(el.getAttribute('data-depth')) || 0;
-      el.style.setProperty('--tx', `${x * d}px`);
-      el.style.setProperty('--ty', `${y * d}px`);
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (pxEls.length && !reduceMotion.matches) {
+    let raf = null;
+    let mx = 0;
+    let my = 0;
+    window.addEventListener('mousemove', (e) => {
+      mx = e.clientX / window.innerWidth - 0.5;
+      my = e.clientY / window.innerHeight - 0.5;
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        raf = null;
+        pxEls.forEach((el) => {
+          const d = parseFloat(el.getAttribute('data-depth')) || 0;
+          el.style.setProperty('--tx', `${mx * d}px`);
+          el.style.setProperty('--ty', `${my * d}px`);
+        });
+      });
     });
-  });
+  }
 
   /* ---------- Menubar state + TOP button ---------- */
   const onScroll = () => {
@@ -100,6 +117,7 @@
     if (topBtn) {
       const on = y > 600;
       topBtn.style.opacity = on ? '1' : '0';
+      topBtn.style.visibility = on ? 'visible' : 'hidden';
       topBtn.style.pointerEvents = on ? 'auto' : 'none';
       topBtn.style.transform = on ? 'translateY(0)' : 'translateY(16px)';
     }

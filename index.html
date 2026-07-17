@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>황원홍 · 웹퍼블리셔 포트폴리오 2026</title>
 <meta name="description" content="8년차 웹퍼블리셔 황원홍의 포트폴리오. HTML5 · SCSS · JavaScript · jQuery.">
+<link rel="canonical" href="https://hwh-portfolio.pages.dev/">
+<meta name="theme-color" content="#efe8da">
+<meta property="og:type" content="website">
+<meta property="og:title" content="황원홍 · 웹퍼블리셔 포트폴리오 2026">
+<meta property="og:description" content="8년차 웹퍼블리셔 황원홍의 포트폴리오. HTML5 · SCSS · JavaScript · jQuery.">
+<meta property="og:url" content="https://hwh-portfolio.pages.dev/">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Sacramento&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -17,7 +25,7 @@
 
   <!-- MENUBAR -->
   <div class="mbar" id="mbar">
-    <span class="mbar-brand">◐ HWANG WONHONG</span>
+    <span class="mbar-brand"><span aria-hidden="true">◐</span> HWANG WONHONG</span>
     <nav class="mnav">
       <a class="navk active" data-nav="home" href="#home">Home</a>
       <a class="navk" data-nav="about" href="#about">About</a>
@@ -26,8 +34,8 @@
       <a class="navk" data-nav="contact" href="#contact">Contact</a>
     </nav>
     <div class="mbar-right">
-      <button class="tgl" type="button" data-theme-toggle><span class="sun">☀ Light</span><span class="moon">☾ Dark</span></button>
-      <span class="mbar-time">9:41</span>
+      <button class="tgl" type="button" data-theme-toggle aria-label="다크 모드 전환" aria-pressed="false"><span class="sun">☀ Light</span><span class="moon">☾ Dark</span></button>
+      <span class="mbar-time" aria-hidden="true">9:41</span>
     </div>
   </div>
 
@@ -36,10 +44,10 @@
     <div class="hero-stage">
       <div class="px hero-type" data-depth="-14">
         <div class="hero-script">publisher</div>
-        <div class="hero-headline">portfolio</div>
+        <h1 class="hero-headline">portfolio</h1>
         <div class="hero-year">(2026)</div>
         <div class="hero-meta">황원홍 HWANG WONHONG · 웹퍼블리셔 WEB PUBLISHER</div>
-        <div class="hero-meta">ownwebtexture@gmail.com · 개발경력 8년 4개월</div>
+        <div class="hero-meta">hwhmmm@gmail.com · 개발경력 8년 4개월</div>
       </div>
 
       <a href="#about" class="px hero-deco folder-link" data-depth="26" style="left:44px;top:150px">
@@ -98,12 +106,12 @@
   <section id="about" class="section section--about">
     <div class="container">
       <div class="reveal sec-head">
-        <span class="sec-num">01 / ABOUT</span>
+        <h2 class="sec-num">01 / ABOUT</h2>
         <span class="sec-rule"></span>
       </div>
       <div class="reveal window">
         <div class="window-bar">
-          <span class="traffic"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i></span>
+          <span class="traffic" aria-hidden="true"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i></span>
           <span class="window-title">about — 소개.txt</span>
         </div>
         <div class="about-grid">
@@ -113,7 +121,7 @@
             <div class="about-name-en">HWANG WONHONG</div>
             <div class="about-facts">
               <div><span class="fact-key">ROLE</span><br>웹퍼블리셔 · 8년차</div>
-              <div><span class="fact-key">EMAIL</span><br>ownwebtexture@gmail.com</div>
+              <div><span class="fact-key">EMAIL</span><br>hwhmmm@gmail.com</div>
             </div>
           </div>
           <div class="about-body">
@@ -137,7 +145,7 @@
   <section id="skills" class="section section--skills">
     <div class="container">
       <div class="reveal sec-head">
-        <span class="sec-num">02 / SKILLS</span>
+        <h2 class="sec-num">02 / SKILLS</h2>
         <span class="sec-rule"></span>
         <span class="sec-tail">기술 스택</span>
       </div>
@@ -163,7 +171,7 @@
   <section id="works" class="section section--works">
     <div class="container">
       <div class="reveal sec-head">
-        <span class="sec-num">03 / WORKS</span>
+        <h2 class="sec-num">03 / WORKS</h2>
         <span class="sec-rule"></span>
         <span class="sec-tail">07 projects</span>
       </div>
@@ -204,9 +212,9 @@
   <section id="contact" class="section section--contact">
     <div class="contact-inner">
       <div class="reveal c-script">let's work together</div>
-      <div class="reveal c-title">함께 만들어요</div>
+      <h2 class="reveal c-title">함께 만들어요</h2>
       <p class="reveal c-lead">채용·협업 제안 언제든 환영합니다. 아래 메일로 연락 주시면 빠르게 회신드릴게요.</p>
-      <a href="mailto:ownwebtexture@gmail.com" class="reveal c-cta">✉ ownwebtexture@gmail.com</a>
+      <a href="mailto:hwhmmm@gmail.com" class="reveal c-cta">✉ hwhmmm@gmail.com</a>
       <div class="reveal c-sign">HWANG WONHONG · WEB PUBLISHER · SINCE 2016</div>
     </div>
   </section>
@@ -218,11 +226,11 @@
       <a href="#home">Home</a>
       <a href="#works">Works</a>
       <a href="#contact">Contact</a>
-      <button class="tgl" type="button" data-theme-toggle><span class="sun">☀ Light</span><span class="moon">☾ Dark</span></button>
+      <button class="tgl" type="button" data-theme-toggle aria-label="다크 모드 전환" aria-pressed="false"><span class="sun">☀ Light</span><span class="moon">☾ Dark</span></button>
     </div>
   </footer>
 
-  <a href="#home" class="topbtn" id="topbtn">↑</a>
+  <a href="#home" class="topbtn" id="topbtn" aria-label="맨 위로">↑</a>
 
 </div>
 

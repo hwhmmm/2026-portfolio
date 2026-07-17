@@ -11,8 +11,8 @@
   border:1px solid var(--line);background:var(--panel);color:var(--ink);
   box-shadow:var(--shadow);cursor:pointer;
   display:flex;align-items:center;justify-content:center;
-  opacity:0;pointer-events:none;transform:translateY(16px);
-  transition:opacity .3s,transform .3s,background .5s;
+  opacity:0;visibility:hidden;pointer-events:none;transform:translateY(16px);
+  transition:opacity .3s,transform .3s,visibility .3s,background .5s;
 }
 
 /* ---------- Responsive ---------- */

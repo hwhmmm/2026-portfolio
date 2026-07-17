@@ -8,9 +8,9 @@
   text-align:center;pointer-events:none;z-index:2;
 }
 .hero-script{font-family:var(--script);font-size:98px;line-height:.7;color:var(--dust);transform:rotate(-4deg) translateX(-92px)}
-.hero-headline{font-family:var(--serif);font-weight:900;font-size:158px;line-height:.86;letter-spacing:-.035em;color:var(--ink);margin-top:-30px}
+.hero-headline{font-family:var(--serif);font-weight:900;font-size:158px;line-height:.86;letter-spacing:-.035em;color:var(--ink);margin:-30px 0 0}
 .hero-year{font-family:var(--serif);font-style:italic;font-size:34px;margin-top:6px}
-.hero-meta{font:400 12.5px var(--mono);letter-spacing:.06em;color:var(--ink3);margin-top:5px}
+.hero-meta{font:400 12.5px var(--mono);letter-spacing:.06em;color:var(--ink2);margin-top:5px}
 .hero-type .hero-meta:first-of-type{margin-top:26px}
 
 .folder-link{position:absolute;z-index:3}
